@@ -19,5 +19,9 @@ alias relaxed="docker run -it --rm -u $(id -u):$(id -g) -v $(pwd):$(pwd) -w $(pw
 ### Run
 
 ```sh
-relaxed ./examples/poster/poster.pug [--build-once]
+relaxed ./examples/poster/poster.pug --no-sandbox [--build-once]
 ```
+
+## NB
+This tool with the `--no-sandbox` option used to work until recently, and no sandbox setting seemed conclusive.  
+This might be a security issue in some usecases.
